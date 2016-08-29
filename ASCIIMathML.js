@@ -928,7 +928,7 @@ function AMparseExpr(str,rightbracket) {
       isnegIoverI = false;
       if (node.nodeName=='mrow' && node.firstChild.firstChild.nodeValue=="-") {
         isnegIoverI = true;
-        node = node.childNodes[1];
+        node.removeChild(node.firstChild);
       }
       AMremoveBrackets(node);
       node = createMmlNode(symbol.tag,node);
@@ -936,6 +936,7 @@ function AMparseExpr(str,rightbracket) {
       if (isnegIoverI) {
       	mrow = createMmlNode("mrow", createMmlNode("mo",document.createTextNode("-")));
       	mrow.appendChild(node);
+      	console.log(mrow.outerHTML);
         newFrag.appendChild(mrow);
       } else {
       	newFrag.appendChild(node);
