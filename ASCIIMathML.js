@@ -355,7 +355,7 @@ var AMsymbols = [
 {input:"dz",   tag:"mi", output:"{:d z:}", tex:null, ttype:DEFINITION},
 {input:"dt",   tag:"mi", output:"{:d t:}", tex:null, ttype:DEFINITION},
 {input:"oint", tag:"mo", output:"\u222E", tex:null, ttype:CONST},
-{input:"del",  tag:"mo", output:"\u2202", tex:"partial", ttype:CONST},
+{input:"del",  tag:"mo", output:"\u2202", tex:"partial", ttype:UNARY, func:true},
 {input:"grad", tag:"mo", output:"\u2207", tex:"nabla", ttype:CONST},
 {input:"+-",   tag:"mo", output:"\u00B1", tex:"pm", ttype:CONST},
 {input:"-+",   tag:"mo", output:"\u2213", tex:"mp", ttype:CONST},
